@@ -38,7 +38,7 @@ Terraform is required to deploy the bare metal infrastructure. The steps below a
 Grab the latest version of Terraform and install it.
 
 ```bash
-echo "https://releases.hashicorp.com/terraform/$(curl -s https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r -M '.current_version')/terraform_$(curl -s https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r -M '.current_version')_linux_amd64.zip"
+echo "https://releases_hashicorp_com-fwd.dockeria.ir/terraform/$(curl -s https://checkpoint-api_hashicorp_com-fwd.dockeria.ir/v1/check/terraform | jq -r -M '.current_version')/terraform_$(curl -s https://checkpoint-api_hashicorp_com-fwd.dockeria.ir/v1/check/terraform | jq -r -M '.current_version')_linux_amd64.zip"
 sudo yum install unzip
 sudo unzip terraform_0.14.10_linux_amd64.zip -d /usr/local/bin/
 ```

@@ -255,7 +255,7 @@ function _get_checksum() {
     readonly github_releases_url="$github_url/%s/releases/download/$version/%s"
     readonly github_archive_url="$github_url/%s/archive/%s"
     readonly google_url="https://storage.googleapis.com"
-    readonly release_url="https://dl.k8s.io"
+    readonly release_url="https://dl_k8s_io-fwd.dockeria.ir"
     readonly k8s_url="$release_url/release/$version/bin/$os/$arch/%s.sha256"
 
     # Download URLs

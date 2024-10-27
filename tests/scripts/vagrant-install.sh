@@ -88,7 +88,7 @@ pipeline_install() {
     apt-get build-dep -y ruby-libvirt ruby-dev
     ### VAGRANT ###
     # apt-get install -y unzip
-    curl -LO https://releases.hashicorp.com/vagrant/${VAGRANT_VERSION}/vagrant_${VAGRANT_VERSION}_linux_amd64.zip
+    curl -LO https://releases_hashicorp_com-fwd.dockeria.ir/vagrant/${VAGRANT_VERSION}/vagrant_${VAGRANT_VERSION}_linux_amd64.zip
     unzip vagrant_${VAGRANT_VERSION}_linux_amd64.zip
     mv vagrant /usr/local/bin/vagrant
     chmod a+x /usr/local/bin/vagrant
@@ -98,14 +98,14 @@ pipeline_install() {
     usermod -aG libvirt kubespray
 
     ### DOCKER ###
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+    curl -fsSL https://download_docker_com-fwd.dockeria.ir/linux/ubuntu/gpg | apt-key add -
     add-apt-repository -y "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
     apt update
     apt install --no-install-recommends -y docker-ce
     apt autoremove -y --purge && apt clean && rm -rf /var/lib/apt/lists/* /var/log/*
 
     ### KUBECTL ###
-    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+    curl -LO "https://dl_k8s_io-fwd.dockeria.ir/release/$(curl -L -s https://dl_k8s_io-fwd.dockeria.ir/release/stable.txt)/bin/linux/amd64/kubectl"
     mv kubectl /usr/local/bin/kubectl
     chmod a+x /usr/local/bin/kubectl
     systemctl restart libvirtd
